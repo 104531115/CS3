@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body onload = "randomNumber()">
+<h1 id = "randNum"></h1>
+<h2 id = "break"></h2>
+</body>
+<script>
+	
+	function randomNumber(){
+	random = Math.floor(Math.random() * 1001);
+	document.getElementById("randNum").innerHTML = random;
+	
+	var x = random % 1000;
+	var y = random % 100;
+	var ones = random % 10;
+	
+	var hundreds = x - y;
+	var tens = y - ones;
+	document.getElementById("break").innerHTML = (hundreds + ", " + tens + ", " + ones);
+	
+	}
+</script>
+</html>
