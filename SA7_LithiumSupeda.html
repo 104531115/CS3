@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick = "enterName()"> Click here to enter your name </button> 
+	
+     <script>
+    	/* do not forget to include comments in your answer */
+		function enterName(){
+		var name = prompt("Please enter your name",""); // prompts for name of user // 
+		document.getElementById("thename").innerHTML = name; // get id for name // 
+		
+		var num = name.length; // returns the length of name // 
+			while (num > 9){
+			var num = Math.floor (num / 10) + (num % 10); // determines the number used for fortune // 
+			}
+			
+			// this part of the code is used to display the fortune with different outputs of different conditions // 
+			switch(num){
+			case 0:
+			
+			document.getElementById("fortune").innerHTML = "Flat 1 sa Stats";
+			break;
+			
+			case 1:
+			
+			document.getElementById("fortune").innerHTML = "Business is booming";
+			break; 
+			
+			case 2:
+			
+			document.getElementById("fortune").innerHTML = "Your lucky day";
+			break;
+			
+			case 3:
+			
+			document.getElementById("fortune").innerHTML = "Avoid red objects";
+			break; 
+			
+			case 4:
+			
+			document.getElementById("fortune").innerHTML = "Someone is thinking about you";
+			break;
+			
+			case 5:
+			
+			document.getElementById("fortune").innerHTML = "Someone will approach you";
+			break; 
+			
+			case 6:
+			
+			document.getElementById("fortune").innerHTML = "You will be surprised";
+			break;
+			
+			case 7:
+			
+			document.getElementById("fortune").innerHTML = "Dont make any regrets";
+			break; 
+			
+			case 8:
+			
+			document.getElementById("fortune").innerHTML = "Nothing happens";
+			break;
+			
+			case 9:
+			
+			document.getElementById("fortune").innerHTML = "You will be confused";
+			break; 
+		}
+		}
+    </script>
+    
+</body>
+</html>
