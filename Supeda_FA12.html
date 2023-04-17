@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<title> Navigate_Supeda</title>
+	<style>
+		table, tr, td {border: 1px solid black;}
+	</style>
+<head>
+<body>
+	<p> Enter a number between 2 and 10
+	<form>
+		<input type="number" id="num_1" min="2" max="10"> by <input type="number" id="num_2" min="2" max="10">
+	</form>
+	</p>
+	<button onclick="table()">Click here to create table</button>
+	<br>
+	<div id="tbl"></div>
+	<script>
+		function table(){
+		var value;
+		var x = document.getElementById("num_1").value;
+		var y = document.getElementById("num_2").value;
+		var table = "<table>";
+		
+		if ((2<=x && x<=10) && (2<=y && y<=10)){
+			for(var i=1; i<=x; i++){
+			table += "<tr>";
+				for(var j=1; j<=y; j++){
+					val = i*j;
+					table = table + "<td>" + val + "</td>";
+				}
+					table = table + "</tr>";
+				}
+				table = table + "</table>";
+				document.getElementById("tbl").innerHTML = table;
+			}
+			else{
+				alert("Please enter only a number between 2 and 10");
+			}
+		
+		}
+	</script>
+</body>
+</html>
